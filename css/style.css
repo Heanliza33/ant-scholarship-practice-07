@@ -4,28 +4,25 @@
         background-color: #f0f0f2;
       }
 
-      .timeline-list {
-        position: relative;
-      }
 
-      .timeline-list::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 24px;
-        width: 2px;
-        background-color: #f0f0f2;
-        height: auto;
-        z-index: 0;
-      }
 
       .timeline-item {
         position: relative;
         margin-bottom: 40px;
         display: flex;
-        align-items: center;
       }
+      .timeline-item::before{
+            content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 24px;
+        border-left: 3px solid #f0f0f2;
+        z-index: 0;
+        height: 100px;
+        transform: translateY(25px);
+      }
+
 
       .timeline-item:last-child::after {
         content: none;
@@ -40,7 +37,9 @@
         align-items: center;
         justify-content: center; 
         z-index: 1; 
+        position: relative;
       }
+    
       .icon-experience{
          width: 75px;
          border-radius: 100%;
